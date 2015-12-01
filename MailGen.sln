@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailGen", "MailGen\MailGen.csproj", "{61EBE914-A171-4BD7-B84D-E926DBE16D08}"
+	ProjectSection(ProjectDependencies) = postProject
+		{18FEDA0C-D147-4286-B39A-01204808106A} = {18FEDA0C-D147-4286-B39A-01204808106A}
+		{CFEF4AAE-E1A7-4131-86F3-A1F2E38C9162} = {CFEF4AAE-E1A7-4131-86F3-A1F2E38C9162}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controls", "..\цут\project\testing process\Controls\Controls.csproj", "{CFEF4AAE-E1A7-4131-86F3-A1F2E38C9162}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrightIdeasSoftware", "..\цут\project\testing process\ObjectListView\BrightIdeasSoftware.csproj", "{18FEDA0C-D147-4286-B39A-01204808106A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{61EBE914-A171-4BD7-B84D-E926DBE16D08}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{61EBE914-A171-4BD7-B84D-E926DBE16D08}.Debug|x86.Build.0 = Debug|Any CPU
+		{61EBE914-A171-4BD7-B84D-E926DBE16D08}.Release|x86.ActiveCfg = Debug|Any CPU
+		{61EBE914-A171-4BD7-B84D-E926DBE16D08}.Release|x86.Build.0 = Debug|Any CPU
+		{CFEF4AAE-E1A7-4131-86F3-A1F2E38C9162}.Debug|x86.ActiveCfg = Debug|x86
+		{CFEF4AAE-E1A7-4131-86F3-A1F2E38C9162}.Debug|x86.Build.0 = Debug|x86
+		{CFEF4AAE-E1A7-4131-86F3-A1F2E38C9162}.Release|x86.ActiveCfg = Debug|x86
+		{CFEF4AAE-E1A7-4131-86F3-A1F2E38C9162}.Release|x86.Build.0 = Debug|x86
+		{18FEDA0C-D147-4286-B39A-01204808106A}.Debug|x86.ActiveCfg = Debug|x86
+		{18FEDA0C-D147-4286-B39A-01204808106A}.Debug|x86.Build.0 = Debug|x86
+		{18FEDA0C-D147-4286-B39A-01204808106A}.Release|x86.ActiveCfg = Debug|x86
+		{18FEDA0C-D147-4286-B39A-01204808106A}.Release|x86.Build.0 = Debug|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="StandartEnd" xml:space="preserve">
+    <value>
+Sending debug mail disabled.
+Continue execution?</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="SmtpUndefined" xml:space="preserve">
+    <value>Smtp port (smtpport in conf.json) is not integer value</value>
+  </data>
+  <data name="SenderUndefined" xml:space="preserve">
+    <value>Sender (errormailfrom in conf.json) for error mail undefined.</value>
+  </data>
+  <data name="ErrorAdressUndefined" xml:space="preserve">
+    <value>Email (errormailadress in conf.json) for debug mail undefined.</value>
+  </data>
+  <data name="SmtpServerUndefined" xml:space="preserve">
+    <value>Smtp server undefined (smtpserver in conf.json).
+The generated letters can not be send.</value>
+  </data>
+  <data name="LangUnrecognized" xml:space="preserve">
+    <value>Unknown language code {0} (lang in conf.json)</value>
+  </data>
+  <data name="LangCodeIsNotInteger" xml:space="preserve">
+    <value>Language code (lang in conf.json) is not integer ({0})</value>
+  </data>
+  <data name="FolderNotFound" xml:space="preserve">
+    <value>Folder with name {0} ({1} in conf.json) not found/found several</value>
+  </data>
+  <data name="CannotGetTemplateFolder" xml:space="preserve">
+    <value>Cannot get template folder ({0} in conf.json)</value>
+  </data>
+  <data name="CannotProcessMenuItem" xml:space="preserve">
+    <value>Cannot process menu item</value>
+  </data>
+  <data name="UnrecognizedEwsVersion" xml:space="preserve">
+    <value>Cannot recognize EWS version from value </value>
+  </data>
+  <data name="CannotConnectToEws" xml:space="preserve">
+    <value>Cannot connect to EWS</value>
+  </data>
+  <data name="CannotGetContactList" xml:space="preserve">
+    <value>Cannot get contact list</value>
+  </data>
+  <data name="CannotGetMailTemplateList" xml:space="preserve">
+    <value>Cannot get mail template list</value>
+  </data>
+  <data name="CannotCreateTrace" xml:space="preserve">
+    <value>Cannot create EWS trace file</value>
+  </data>
+  <data name="NameMaxLength" xml:space="preserve">
+    <value>The login has a maximum length of {0} characters.</value>
+  </data>
+  <data name="TargetNotNull" xml:space="preserve">
+    <value>The target cannot be a null value.</value>
+  </data>
+  <data name="TargetNameLength" xml:space="preserve">
+    <value>The target has a maximum length of {0} characters.</value>
+  </data>
+  <data name="ErrorText" xml:space="preserve">
+    <value>
+Error text: 
+</value>
+  </data>
+  <data name="PasswordLength" xml:space="preserve">
+    <value>The password has a maximum length of {0} characters.</value>
+  </data>
+  <data name="RetryConnection" xml:space="preserve">
+    <value>Would you like to retry connecting to EWS?</value>
+  </data>
+  <data name="UnhandledCondition" xml:space="preserve">
+    <value>Unhandled condition : </value>
+  </data>
+  <data name="ConfirmationFailed" xml:space="preserve">
+    <value>Credential confirmation failed : </value>
+  </data>
+  <data name="AutodiscoverComplete" xml:space="preserve">
+    <value>Autodiscover complete.</value>
+  </data>
+  <data name="StartAutodiscover" xml:space="preserve">
+    <value>Using Autodiscover to find EWS URL for {0}. Please wait... </value>
+  </data>
+  <data name="AttemptingConnectEws" xml:space="preserve">
+    <value>Attempting to connect to EWS...</value>
+  </data>
+  <data name="AuthInvalidUpn" xml:space="preserve">
+    <value>Authenticate : Please enter your credentials in UPN format (email or domain \\name)</value>
+  </data>
+  <data name="Auth" xml:space="preserve">
+    <value>Authenticate</value>
+  </data>
+  <data name="SuccConnection" xml:space="preserve">
+    <value>Successfully connected to EWS.</value>
+  </data>
+  <data name="CredNotAuth" xml:space="preserve">
+    <value>The credentials were not authenticated.</value>
+  </data>
+  <data name="EwsLogin" xml:space="preserve">
+    <value>EWS Login</value>
+  </data>
+  <data name="InputYourCred" xml:space="preserve">
+    <value>Input your EWS login and password</value>
+  </data>
+  <data name="CannotGetEventTemplateList" xml:space="preserve">
+    <value>Cannot get event template list</value>
+  </data>
+  <data name="CannotGetStoredContacts" xml:space="preserve">
+    <value>Cannot load stored contacts</value>
+  </data>
+  <data name="ColumnCanSend" xml:space="preserve">
+    <value>Sender</value>
+  </data>
+  <data name="ColumnCanReceive" xml:space="preserve">
+    <value>Receiver</value>
+  </data>
+  <data name="ColumnName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="MessageNeedRestart" xml:space="preserve">
+    <value>After change language need restart application. Do it now?</value>
+  </data>
+  <data name="BtnAddSelectedToMailList" xml:space="preserve">
+    <value>Add selected to mail list</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ArrowRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Arrow_full_right.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ColumnSubject" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="BtnCreate" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="BtnDelete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="BtnRefresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="BtnSearch" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="BtnClear" xml:space="preserve">
+    <value>Clear filter</value>
+  </data>
+  <data name="LbCount" xml:space="preserve">
+    <value>Count:</value>
+  </data>
+  <data name="LbSearch" xml:space="preserve">
+    <value>Search:</value>
+  </data>
+  <data name="CannotDeleteContact" xml:space="preserve">
+    <value>Cannot delete contact </value>
+  </data>
+  <data name="SendersCount" xml:space="preserve">
+    <value>Senders count &lt;= 0</value>
+  </data>
+  <data name="RecipientsCount" xml:space="preserve">
+    <value>Recipients count &lt;= 0</value>
+  </data>
+  <data name="TryLoadFromDefault" xml:space="preserve">
+    <value>Try load data from default folder</value>
+  </data>
+  <data name="DeleteConfirmation" xml:space="preserve">
+    <value>Do you really want delete selected rows?</value>
+  </data>
+  <data name="Save" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save-1127191707.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BtnSaveAll" xml:space="preserve">
+    <value>Save all</value>
+  </data>
+</root>

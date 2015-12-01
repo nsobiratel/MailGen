@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{61EBE914-A171-4BD7-B84D-E926DBE16D08}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MailGen</RootNamespace>
+    <AssemblyName>MailGen</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="fastjson, Version=2.1.0.0, Culture=neutral, PublicKeyToken=6b75a806b86095cd, processorArchitecture=MSIL">
+      <HintPath>..\packages\fastJSON.2.1.14.0\lib\net40\fastjson.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Exchange.WebServices, Version=15.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Exchange.WebServices.2.2\lib\40\Microsoft.Exchange.WebServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Exchange.WebServices.Auth, Version=15.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Exchange.WebServices.2.2\lib\40\Microsoft.Exchange.WebServices.Auth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MsgReader">
+      <HintPath>..\packages\MSGReader.1.9.9\lib\MsgReader.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Auth\alter\CredentialUI.cs" />
+    <Compile Include="Classes\Auth\alter\IPromptCredentialsResult.cs" />
+    <Compile Include="Classes\Auth\alter\PromptCredentialsResult.cs" />
+    <Compile Include="Classes\Auth\alter\PromptCredentialsSecureStringResult.cs" />
+    <Compile Include="Classes\Auth\CertificateCallback.cs" />
+    <Compile Include="Classes\Auth\ConnectionParams.cs" />
+    <Compile Include="Classes\Auth\CredentialHelper.cs" />
+    <Compile Include="Classes\Auth\CREDMGMTUI.cs" />
+    <Compile Include="Classes\Auth\CredPrompt.cs" />
+    <Compile Include="Classes\Auth\IUserData.cs" />
+    <Compile Include="Classes\Auth\SecureDlg\CredentialsDialog.cs" />
+    <Compile Include="Classes\Auth\SecureDlg\CREDUI.cs" />
+    <Compile Include="Classes\Auth\SecureDlg\GDI32.cs" />
+    <Compile Include="Classes\Auth\Service.cs" />
+    <Compile Include="Classes\Auth\TraceListener.cs" />
+    <Compile Include="Classes\Auth\UserData.cs" />
+    <Compile Include="Classes\Auth\UserDataFromConsole.cs" />
+    <Compile Include="Classes\Config.cs" />
+    <Compile Include="Classes\LocalizationHelper.cs" />
+    <Compile Include="Classes\Logging\Realizations\ComponentLogWriteAlgorithm.cs" />
+    <Compile Include="Classes\Logging\Realizations\FileLogWriteAlgorithm.cs" />
+    <Compile Include="Classes\Logging\Algorithms\IFileLogWriteAlgorithm.cs" />
+    <Compile Include="Classes\Logging\Algorithms\ILogWriteAlgorithm.cs" />
+    <Compile Include="Classes\Logging\Loggers\GenericLogger.cs" />
+    <Compile Include="Classes\Logging\Loggers\Logger.cs" />
+    <Compile Include="Classes\Logging\Loggers\Mailer.cs" />
+    <Compile Include="Classes\Logging\Loggers\TypedLogger.cs" />
+    <Compile Include="Classes\StoredContact.cs" />
+    <Compile Include="Dialogs\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\LocalizibleStrings.Designer.cs">
+      <DependentUpon>LocalizibleStrings.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Dialogs\MainForm.en.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MainForm.ru.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\LocalizibleStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LocalizibleStrings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\LocalizibleStrings.ru.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LocalizibleStrings.ru.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\LocalizibleStrings.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LocalizibleStrings.en.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\LocalizibleStrings.ru.Designer.cs">
+      <DependentUpon>LocalizibleStrings.ru.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\LocalizibleStrings.en.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LocalizibleStrings.en.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="conf.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\цут\project\testing process\Controls\Controls.csproj">
+      <Project>{cfef4aae-e1a7-4131-86f3-a1f2e38c9162}</Project>
+      <Name>Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\цут\project\testing process\ObjectListView\BrightIdeasSoftware.csproj">
+      <Project>{18feda0c-d147-4286-b39a-01204808106a}</Project>
+      <Name>BrightIdeasSoftware</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow_full_right.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-1127191707.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
