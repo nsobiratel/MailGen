@@ -1,6 +1,5 @@
 ﻿namespace MailGen.Classes.Auth
 {
-    using System.Linq;
     using System.Net;
     using System.Net.Security;
     using System.Security.Cryptography.X509Certificates;
@@ -51,20 +50,25 @@
             bool all = true;
             foreach (X509ChainStatus status in chain.ChainStatus)
             {
-                if ((certificate.Subject == certificate.Issuer) 
+                if ((certificate.Subject == certificate.Issuer)
                     && (status.Status == X509ChainStatusFlags.UntrustedRoot))
+                {
+                    Logger.Message("Certificate for " + certificate.Subject + " is selfsigned");
                     continue;
+                }
 
-                if (status.Status == X509ChainStatusFlags.NoError) 
+                if (status.Status == X509ChainStatusFlags.NoError)
+                {
+                    Logger.Message("Certificate for " + certificate.Subject + " valid");
                     continue;
+                }
 
-                Logger.Warning("Сертификат для " + certificate.Subject + " : " + status.StatusInformation);
+                Logger.Warning("Certificate for " + certificate.Subject + " have bad status : " + status.StatusInformation);
                 all = false;
                 break;
             }
 
             return all;
-            //return true;
         }
     }
 }

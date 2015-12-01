@@ -18,7 +18,7 @@
             if (string.IsNullOrWhiteSpace(cultureStr))
             {
                 // если в конфиге не указана локаль, берем дефолтную для системы
-                return CultureInfo.InstalledUICulture;
+                return GetInstalledUiCulture();
             }
 
             // если локаль указана, то пытаемся понять, настоящая она или нет
@@ -37,7 +37,7 @@
                         CultureInfo.CurrentCulture,
                         LocalizibleStrings.LangUnrecognized,
                         cultureStr));
-                    return CultureInfo.InstalledUICulture;
+                    return GetInstalledUiCulture();
                 }
             }
             // если не настоящая - ругаемся и устанавливаем системную дефолтную
@@ -45,7 +45,16 @@
                 CultureInfo.CurrentCulture,
                 LocalizibleStrings.LangCodeIsNotInteger,
                 cultureStr));
-            return CultureInfo.InstalledUICulture;
+            return GetInstalledUiCulture();
+        }
+
+        private static CultureInfo GetInstalledUiCulture()
+        {
+            int curId = CultureInfo.InstalledUICulture.LCID;
+            if (curId == LocalizationHelper.EnInt || curId == LocalizationHelper.RuInt)
+                return CultureInfo.InstalledUICulture;
+            return
+                CultureInfo.GetCultureInfo(LocalizationHelper.EnInt);
         }
     }
 }

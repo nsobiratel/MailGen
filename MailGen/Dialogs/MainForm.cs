@@ -7,6 +7,7 @@
     using System.Globalization;
     using System.IO;
     using System.Linq;
+    using System.Runtime.Serialization.Formatters.Binary;
     using System.Threading;
     using System.Windows.Forms;
 
@@ -343,8 +344,15 @@
                     FindItemsResults<Item> items =
                         templatesFolder.FindItems(new ItemView(int.MaxValue));*/
 
-                    IEnumerable<Storage.Message> items = 
-                        Directory.GetFiles(Config.GetParam(mailTemplateFolder)).Select(t => new Storage.Message(t));
+                    IList<Storage.Message> items = new List<Storage.Message>();
+
+                    // ReSharper disable once LoopCanBeConvertedToQuery
+                    // под отладчиком всякая фигня происходит если linq
+                    foreach (string path in 
+                        Directory.GetFiles(Config.GetParam(mailTemplateFolder)))
+                    {
+                        items.Add(new Storage.Message(path));
+                    }
                     
                     this.clMailTemplates.dgObjects.SetObjects(items.ToList());
                 }
@@ -579,7 +587,7 @@
                 DataType = typeof(string),
                 HeaderTextAlign = HorizontalAlignment.Center,
                 TextAlign = HorizontalAlignment.Left,
-                IsEditable = true,
+                IsEditable = false,
                 Width = 200,
                 DisplayIndex = 0/*,
                 AspectGetter = o =>
@@ -591,6 +599,7 @@
             this.clEventTemplates.dgObjects.PrimarySortColumn = column;
 
             this.clEventTemplates.dgObjects.AllColumns.Add(column);
+
             this.clEventTemplates.dgObjects.RebuildColumns();
             this.clEventTemplates.dgObjects.Sorting = SortOrder.Ascending;
             this.clEventTemplates.dgObjects.Sort();
@@ -609,7 +618,7 @@
                 DataType = typeof(string),
                 HeaderTextAlign = HorizontalAlignment.Center,
                 TextAlign = HorizontalAlignment.Left,
-                IsEditable = true,
+                IsEditable = false,
                 Width = 200,
                 DisplayIndex = 0
             };
@@ -748,7 +757,7 @@
                 return;
             }
 
-            int sendersMax = senders.Count - 1;
+            int sendersMax = senders.Count;
 
             IList<StoredContact> recipients =
                 contacts.Where(c => c.CanBeRecipient).ToList();
@@ -760,7 +769,7 @@
             }
 
             Random rnd = new Random();
-            int recipientsMax = recipients.Count - 1;
+            int recipientsMax = recipients.Count;
 
             int sendedCount = 1;
 
@@ -772,38 +781,16 @@
                 {
                     foreach (Storage.Message msg in this.clMailTemplates.dgObjects.Objects)
                     {
-                        EmailMessage newMsg = new EmailMessage(_service);
-
-                        // меняем параметры письма
-                        newMsg. = senders[rnd.Next(sendersMax)].Email;
-
-                        if (rnd.Next(1) == 0)
-                        {
-                            msg.ToRecipients.Add(recipients[rnd.Next(recipientsMax)].Email);
-                        }
-                        else
-                        {
-                            msg.ToRecipients.Add(recipients[rnd.Next(recipientsMax)].Email);
-                            msg.ToRecipients.Add(recipients[rnd.Next(recipientsMax)].Email);
-                        }
-
-                        if (rnd.Next(1) == 1)
-                        {
-                            msg.Forward(new MessageBody("test body prefix for forward message"));
-                        }
-
-                        if (rnd.Next(1) == 1)
-                        {
-                            msg.Reply(new MessageBody("test body prefix for reply message"),
-                                Convert.ToBoolean(rnd.Next(1)));
-                        }
+                        Storage.Message locMsg = msg;
+                        EmailMessage newMsg = 
+                            MainForm.EmailMessageFromMessage(
+                                ref senders, sendersMax, 
+                                ref recipients, recipientsMax, 
+                                ref rnd, ref locMsg);
 
                         // отправляем через ews
-                        msg.Send();
+                        newMsg.Send();
                         sendedCount++;
-
-                        msg.From = null;
-                        msg.ToRecipients.Clear();
 
                         // если уже сгенерировали сколько надо
                         if (sendedCount == this.numMailsCount.Value)
@@ -813,23 +800,105 @@
             }
             else
             {
-                int templatesCount = this.clMailTemplates.dgObjects.ItemCount - 1;
+                int templatesCount = this.clMailTemplates.dgObjects.ItemCount;
                 while (sendedCount <= this.numMailsCount.Value)
                 {
                     int rndIndex = rnd.Next(0, templatesCount);
-                    EmailMessage msg = this.clMailTemplates.dgObjects.Objects[rndIndex] as EmailMessage;
+                    Storage.Message msg = 
+                        this.clMailTemplates.dgObjects.Objects[rndIndex] as Storage.Message;
                     if (msg == null)
                         continue;
 
-                    // меняем параметры письма
-                    // ....
-                    //
+                    EmailMessage newMsg =
+                        MainForm.EmailMessageFromMessage(
+                            ref senders, sendersMax,
+                            ref recipients, recipientsMax,
+                            ref rnd, ref msg);
 
-                    // отправляем через ews
-                    msg.Send();
+                    newMsg.Send();
                     sendedCount++;
                 }
             }
+        }
+
+        private static EmailMessage EmailMessageFromMessage(
+            ref IList<StoredContact> senders, 
+            int sendersMax, 
+            ref IList<StoredContact> recipients, 
+            int recipientsMax, 
+            ref Random rnd, 
+            ref Storage.Message msg)
+        {
+            EmailMessage newMsg = new EmailMessage(MainForm._service)
+            {
+                From = new EmailAddress(senders[rnd.Next(sendersMax)].Email),
+                Sender = new EmailAddress(senders[rnd.Next(sendersMax)].Email),
+                Body = new MessageBody(msg.BodyHtml),
+                Subject = msg.Subject
+            };
+
+            //newMsg.
+
+            foreach (Storage.Attachment attachment in msg.Attachments)
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+                Stream stream = new MemoryStream();
+                bf.Serialize(stream, attachment);
+                newMsg.Attachments.AddFileAttachment(attachment.FileName, stream);
+            }
+
+            // выбираем, какие поля заполнять:
+            //  - обычный список получателей
+            //  - теневую копию
+            //  - и то и другое
+            switch (rnd.Next(3))
+            {
+                case 0:
+                    // заполняем обычный список получателей
+                    newMsg.CcRecipients.Add(recipients[rnd.Next(recipientsMax)].Email);
+                    if (rnd.Next(2) == 0)
+                        newMsg.CcRecipients.Add(recipients[rnd.Next(recipientsMax)].Email);
+                    break;
+                case 1:
+                    // заполняем теневую копию
+                    newMsg.BccRecipients.Add(recipients[rnd.Next(recipientsMax)].Email);
+                    if (rnd.Next(2) == 0)
+                        newMsg.BccRecipients.Add(recipients[rnd.Next(recipientsMax)].Email);
+                    break;
+                default:
+                    // заполняем обычный список получателей
+                    newMsg.CcRecipients.Add(recipients[rnd.Next(recipientsMax)].Email);
+                    if (rnd.Next(2) == 0)
+                        newMsg.CcRecipients.Add(recipients[rnd.Next(recipientsMax)].Email);
+                    // заполняем теневую копию
+                    newMsg.BccRecipients.Add(recipients[rnd.Next(recipientsMax)].Email);
+                    if (rnd.Next(2) == 0)
+                        newMsg.BccRecipients.Add(recipients[rnd.Next(recipientsMax)].Email);
+                    break;
+            }
+
+            newMsg.ToRecipients.Add(recipients[rnd.Next(recipientsMax)].Email);
+            if (rnd.Next(2) == 0)
+            {
+                newMsg.ToRecipients.Add(recipients[rnd.Next(recipientsMax)].Email);
+            }
+
+            if (rnd.Next(2) == 0)
+            {
+                newMsg.Forward(new MessageBody(@"test body prefix for forward message"));
+            }
+
+            if (rnd.Next(2) != 0) 
+                return newMsg;
+
+            newMsg.ReplyTo.Add(recipients[rnd.Next(recipientsMax)].Email);
+            if (rnd.Next(2) == 0)
+            {
+                newMsg.ReplyTo.Add(recipients[rnd.Next(recipientsMax)].Email);
+            }
+
+            newMsg.CreateReply(Convert.ToBoolean(rnd.Next(2)));
+            return newMsg;
         }
 
         private void BtnGenerateEventsClick(object sender, EventArgs e)
