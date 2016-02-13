@@ -10,9 +10,9 @@
     "emailtemplatefolder_ru": "Email_Ru",
     "eventtemplatefolder_en": "Event_En",
     "eventtemplatefolder_ru": "Event_Ru",
-    "ews_url": "https://172.28.0.193/EWS/Exchange.asmx",
-    "user_email": "external01@mobi.loc",
-    "user": "external01",
-    "domain": "mobi",
-    "password": "Passw0rd"
+    "ews_url": "",
+    "user_email": "",
+    "user": "",
+    "domain": "",
+    "password": ""
 }

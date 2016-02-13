@@ -142,9 +142,6 @@
         TgDQASA1MVpwzwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="toolStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 25</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="splitContainer2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left</value>
@@ -155,117 +152,11 @@
   <data name="splitContainer2.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="resource.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="resource.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="resource.BackgroundImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Tile</value>
-  </data>
-  <data name="resource.Font" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>Inherit</value>
-  </data>
   <data name="resource.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 0</value>
   </data>
-  <data name="resource.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="resource.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Inherit</value>
-  </data>
   <data name="resource.Size" type="System.Drawing.Size, System.Drawing">
     <value>320, 25</value>
-  </data>
-  <data name="resource.AccessibleDescription1" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.AccessibleName1" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.Alignment" type="System.Windows.Forms.ListViewAlignment, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="resource.Anchor1" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left</value>
-  </data>
-  <data name="resource.BackgroundImage1" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.BackgroundImageLayout1" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Tile</value>
-  </data>
-  <data name="resource.EmptyListMsg" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.Font1" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.GroupWithItemCountFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.GroupWithItemCountSingularFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.ImeMode1" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>Inherit</value>
-  </data>
-  <data name="resource.LabelWrap" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="resource.MaximumSize1" type="System.Drawing.Size, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="resource.MenuLabelColumns" xml:space="preserve">
-    <value>Columns</value>
-  </data>
-  <data name="resource.MenuLabelGroupBy" xml:space="preserve">
-    <value>Group by '{0}'</value>
-  </data>
-  <data name="resource.MenuLabelLockGroupingOn" xml:space="preserve">
-    <value>Lock group by '{0}'</value>
-  </data>
-  <data name="resource.MenuLabelSelectColumns" xml:space="preserve">
-    <value>Select columns...</value>
-  </data>
-  <data name="resource.MenuLabelSortAscending" xml:space="preserve">
-    <value>Sort by ascending '{0}'</value>
-  </data>
-  <data name="resource.MenuLabelSortDescending" xml:space="preserve">
-    <value>Sort by descending '{0}'</value>
-  </data>
-  <data name="resource.MenuLabelTurnOffGroups" xml:space="preserve">
-    <value>Disable groups</value>
-  </data>
-  <data name="resource.MenuLabelUnlockGroupingOn" xml:space="preserve">
-    <value>Unlock group by '{0}'</value>
-  </data>
-  <data name="resource.MenuLabelUnsort" xml:space="preserve">
-    <value>Disable sort</value>
-  </data>
-  <data name="resource.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.RightToLeft1" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Inherit</value>
-  </data>
-  <data name="resource.RightToLeftLayout" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="resource.Size1" type="System.Drawing.Size, System.Drawing">
     <value>452, 25</value>
@@ -273,116 +164,11 @@
   <data name="clEwsContacts.Size" type="System.Drawing.Size, System.Drawing">
     <value>452, 241</value>
   </data>
-  <data name="resource.AccessibleDescription2" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.AccessibleName2" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.Anchor2" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left</value>
-  </data>
-  <data name="resource.AutoSize1" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="resource.BackgroundImage2" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.BackgroundImageLayout2" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Tile</value>
-  </data>
-  <data name="resource.Font2" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.ImeMode2" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>Inherit</value>
-  </data>
   <data name="resource.Location2" type="System.Drawing.Point, System.Drawing">
     <value>3, 0</value>
   </data>
-  <data name="resource.MaximumSize2" type="System.Drawing.Size, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="resource.RightToLeft2" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Inherit</value>
-  </data>
   <data name="resource.Size2" type="System.Drawing.Size, System.Drawing">
     <value>320, 25</value>
-  </data>
-  <data name="resource.AccessibleDescription3" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.AccessibleName3" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.Alignment1" type="System.Windows.Forms.ListViewAlignment, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="resource.Anchor3" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left</value>
-  </data>
-  <data name="resource.BackgroundImage3" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.BackgroundImageLayout3" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Tile</value>
-  </data>
-  <data name="resource.EmptyListMsg1" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.Font3" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.GroupWithItemCountFormat1" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.GroupWithItemCountSingularFormat1" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.ImeMode3" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>Inherit</value>
-  </data>
-  <data name="resource.LabelWrap1" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="resource.MaximumSize3" type="System.Drawing.Size, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="resource.MenuLabelColumns1" xml:space="preserve">
-    <value>Columns</value>
-  </data>
-  <data name="resource.MenuLabelGroupBy1" xml:space="preserve">
-    <value>Group by '{0}'</value>
-  </data>
-  <data name="resource.MenuLabelLockGroupingOn1" xml:space="preserve">
-    <value>Lock group by '{0}'</value>
-  </data>
-  <data name="resource.MenuLabelSelectColumns1" xml:space="preserve">
-    <value>Select columns...</value>
-  </data>
-  <data name="resource.MenuLabelSortAscending1" xml:space="preserve">
-    <value>Sort by ascending '{0}'</value>
-  </data>
-  <data name="resource.MenuLabelSortDescending1" xml:space="preserve">
-    <value>Sort by descending '{0}'</value>
-  </data>
-  <data name="resource.MenuLabelTurnOffGroups1" xml:space="preserve">
-    <value>Disable groups</value>
-  </data>
-  <data name="resource.MenuLabelUnlockGroupingOn1" xml:space="preserve">
-    <value>Unlock group by '{0}'</value>
-  </data>
-  <data name="resource.MenuLabelUnsort1" xml:space="preserve">
-    <value>Disable sort</value>
-  </data>
-  <data name="resource.Text1" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.RightToLeft3" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Inherit</value>
-  </data>
-  <data name="resource.RightToLeftLayout1" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="resource.Size3" type="System.Drawing.Size, System.Drawing">
     <value>458, 25</value>
@@ -393,6 +179,7 @@
   <data name="splitContainer4.Size" type="System.Drawing.Size, System.Drawing">
     <value>920, 241</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="splitContainer4.SplitterDistance" type="System.Int32, mscorlib">
     <value>452</value>
   </data>
@@ -402,254 +189,14 @@
   <data name="tpContacts.Size" type="System.Drawing.Size, System.Drawing">
     <value>926, 247</value>
   </data>
-  <data name="resource.AccessibleDescription4" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.AccessibleName4" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.Anchor4" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left</value>
-  </data>
-  <data name="resource.AutoSize2" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="resource.BackgroundImage4" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.BackgroundImageLayout4" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Tile</value>
-  </data>
-  <data name="resource.Dock4" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="resource.Font4" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.ImeMode4" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>Inherit</value>
-  </data>
-  <data name="resource.MaximumSize4" type="System.Drawing.Size, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="resource.RightToLeft4" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Inherit</value>
-  </data>
-  <data name="resource.AccessibleDescription5" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.AccessibleName5" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.Alignment2" type="System.Windows.Forms.ListViewAlignment, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="resource.Anchor5" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left</value>
-  </data>
-  <data name="resource.BackgroundImage5" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.BackgroundImageLayout5" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Tile</value>
-  </data>
-  <data name="resource.Dock5" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="resource.EmptyListMsg2" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.Font5" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.GroupWithItemCountFormat2" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.GroupWithItemCountSingularFormat2" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.ImeMode5" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>Inherit</value>
-  </data>
-  <data name="resource.LabelWrap2" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="resource.Location5" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="resource.MaximumSize5" type="System.Drawing.Size, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="resource.MenuLabelColumns2" xml:space="preserve">
-    <value>Columns</value>
-  </data>
-  <data name="resource.MenuLabelGroupBy2" xml:space="preserve">
-    <value>Group by '{0}'</value>
-  </data>
-  <data name="resource.MenuLabelLockGroupingOn2" xml:space="preserve">
-    <value>Lock group by '{0}'</value>
-  </data>
-  <data name="resource.MenuLabelSelectColumns2" xml:space="preserve">
-    <value>Select columns...</value>
-  </data>
-  <data name="resource.MenuLabelSortAscending2" xml:space="preserve">
-    <value>Sort by ascending '{0}'</value>
-  </data>
-  <data name="resource.MenuLabelSortDescending2" xml:space="preserve">
-    <value>Sort by descending '{0}'</value>
-  </data>
-  <data name="resource.MenuLabelTurnOffGroups2" xml:space="preserve">
-    <value>Disable groups</value>
-  </data>
-  <data name="resource.MenuLabelUnlockGroupingOn2" xml:space="preserve">
-    <value>Unlock group by '{0}'</value>
-  </data>
-  <data name="resource.MenuLabelUnsort2" xml:space="preserve">
-    <value>Disable sort</value>
-  </data>
-  <data name="resource.Text2" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.RightToLeft5" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Inherit</value>
-  </data>
-  <data name="resource.RightToLeftLayout2" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.Size5" type="System.Drawing.Size, System.Drawing">
-    <value>460, 25</value>
-  </data>
-  <data name="resource.TabIndex5" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
   <data name="clMailTemplates.Size" type="System.Drawing.Size, System.Drawing">
-    <value>460, 182</value>
-  </data>
-  <data name="resource.AccessibleDescription6" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.AccessibleName6" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.Anchor6" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left</value>
-  </data>
-  <data name="resource.AutoSize3" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="resource.BackgroundImage6" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.BackgroundImageLayout6" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Tile</value>
-  </data>
-  <data name="resource.Dock6" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="resource.Font6" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.ImeMode6" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>Inherit</value>
-  </data>
-  <data name="resource.MaximumSize6" type="System.Drawing.Size, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="resource.RightToLeft6" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Inherit</value>
-  </data>
-  <data name="resource.AccessibleDescription7" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.AccessibleName7" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.Alignment3" type="System.Windows.Forms.ListViewAlignment, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="resource.Anchor7" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left</value>
-  </data>
-  <data name="resource.BackgroundImage7" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.BackgroundImageLayout7" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Tile</value>
-  </data>
-  <data name="resource.Dock7" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="resource.EmptyListMsg3" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.Font7" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.GroupWithItemCountFormat3" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.GroupWithItemCountSingularFormat3" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.ImeMode7" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>Inherit</value>
-  </data>
-  <data name="resource.LabelWrap3" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="resource.Location7" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="resource.MaximumSize7" type="System.Drawing.Size, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="resource.MenuLabelColumns3" xml:space="preserve">
-    <value>Columns</value>
-  </data>
-  <data name="resource.MenuLabelGroupBy3" xml:space="preserve">
-    <value>Group by '{0}'</value>
-  </data>
-  <data name="resource.MenuLabelLockGroupingOn3" xml:space="preserve">
-    <value>Lock group by '{0}'</value>
-  </data>
-  <data name="resource.MenuLabelSelectColumns3" xml:space="preserve">
-    <value>Select columns...</value>
-  </data>
-  <data name="resource.MenuLabelSortAscending3" xml:space="preserve">
-    <value>Sort by ascending '{0}'</value>
-  </data>
-  <data name="resource.MenuLabelSortDescending3" xml:space="preserve">
-    <value>Sort by descending '{0}'</value>
-  </data>
-  <data name="resource.MenuLabelTurnOffGroups3" xml:space="preserve">
-    <value>Disable groups</value>
-  </data>
-  <data name="resource.MenuLabelUnlockGroupingOn3" xml:space="preserve">
-    <value>Unlock group by '{0}'</value>
-  </data>
-  <data name="resource.MenuLabelUnsort3" xml:space="preserve">
-    <value>Disable sort</value>
-  </data>
-  <data name="resource.Text3" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="resource.RightToLeft7" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Inherit</value>
-  </data>
-  <data name="resource.RightToLeftLayout3" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="resource.Size7" type="System.Drawing.Size, System.Drawing">
-    <value>450, 194</value>
-  </data>
-  <data name="resource.TabIndex7" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>460, 176</value>
   </data>
   <data name="clEventTemplates.Size" type="System.Drawing.Size, System.Drawing">
-    <value>450, 182</value>
+    <value>450, 176</value>
   </data>
   <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>920, 182</value>
+    <value>920, 176</value>
   </data>
   <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
     <value>460</value>
@@ -682,7 +229,7 @@
     <value>920, 241</value>
   </data>
   <data name="splitContainer3.SplitterDistance" type="System.Int32, mscorlib">
-    <value>182</value>
+    <value>176</value>
   </data>
   <data name="splitContainer3.SplitterWidth" type="System.Int32, mscorlib">
     <value>10</value>

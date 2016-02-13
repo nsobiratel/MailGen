@@ -41,6 +41,12 @@ namespace MailGen
             // включаем логирование. пока что в файл
             Logger.AddAlgorithm(new FileLogWriteAlgorithm(Config.GetParam(Config.LogFileName)));
 
+            AppDomain.CurrentDomain.UnhandledException +=
+                    (sender, args) => TypedLogger.Error(
+                        typeof(Program), 
+                        LocalizibleStrings.ErrorUnhandledException, 
+                        args.ExceptionObject as Exception);
+
             // получаем и устанавливаем язык
             string lang = Config.GetParam(Config.Lang);
             CultureInfo culture = LocalizationHelper.TryGetCulture(lang);

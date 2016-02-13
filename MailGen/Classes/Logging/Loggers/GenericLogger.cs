@@ -14,10 +14,10 @@ namespace MailGen.Classes.Logging.Loggers
             Logger.Message(GenericLogger<TType>.Beautify(msg));
         }
 
-        /*public static void Message(string msg, params object[] @params)
+        public static void Message(string msg, params object[] @params)
         {
             Logger.Message(Beautify(msg), @params);
-        }  */
+        }
 
         public static void Error(string msg, Exception exc = null, bool critical = false)
         {

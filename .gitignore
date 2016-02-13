@@ -1,2 +1,5 @@
 /_ReSharper.Caches
 /*.user
+*.suo
+*.userprefs
+.consulo

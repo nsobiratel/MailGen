@@ -291,4 +291,22 @@ Error text:
   <data name="BtnSaveAll" xml:space="preserve">
     <value>Save all</value>
   </data>
+  <data name="ErrorCreateFromTemplate" xml:space="preserve">
+    <value>Error when create mail from template </value>
+  </data>
+  <data name="ErrorGenMailMsg" xml:space="preserve">
+    <value>Error while generating messages</value>
+  </data>
+  <data name="ErrorUnhandledException" xml:space="preserve">
+    <value>Unhandled exception</value>
+  </data>
+    <data name="MsgCreatedOf" xml:space="preserve">
+    <value>Created {0} of {1}</value>
+  </data>
+    <data name="MsgSendingStarted" xml:space="preserve">
+    <value>Sending started...</value>
+  </data>
+    <data name="MsgSendingFinished" xml:space="preserve">
+    <value>Sending finished...</value>
+  </data>
 </root>

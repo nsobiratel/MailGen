@@ -284,4 +284,22 @@
   <data name="BtnSaveAll" xml:space="preserve">
     <value>Сохранить все</value>
   </data>
+  <data name="ErrorCreateFromTemplate" xml:space="preserve">
+    <value>Ошибка при создании письма из шаблона </value>
+  </data>
+  <data name="ErrorGenMailMsg" xml:space="preserve">
+    <value>В процессе генерации сообщений возникла ошибка</value>
+  </data>
+  <data name="ErrorUnhandledException" xml:space="preserve">
+    <value>Необработанное исключение</value>
+  </data>
+  <data name="MsgCreatedOf" xml:space="preserve">
+    <value>Создано {0} из {1}</value>
+  </data>
+  <data name="MsgSendingFinished" xml:space="preserve">
+    <value>Отправка завершена</value>
+  </data>
+  <data name="MsgSendingStarted" xml:space="preserve">
+    <value>Отправка начата...</value>
+  </data>
 </root>

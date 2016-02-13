@@ -53,13 +53,13 @@
                 if ((certificate.Subject == certificate.Issuer)
                     && (status.Status == X509ChainStatusFlags.UntrustedRoot))
                 {
-                    Logger.Message("Certificate for " + certificate.Subject + " is selfsigned");
+                    //Logger.Message("Certificate for " + certificate.Subject + " is selfsigned");
                     continue;
                 }
 
                 if (status.Status == X509ChainStatusFlags.NoError)
                 {
-                    Logger.Message("Certificate for " + certificate.Subject + " valid");
+                    //Logger.Message("Certificate for " + certificate.Subject + " valid");
                     continue;
                 }
 

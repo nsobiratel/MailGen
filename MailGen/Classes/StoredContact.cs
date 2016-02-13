@@ -5,6 +5,7 @@
     using System.Text;
 
     using fastJSON;
+
     using Microsoft.Exchange.WebServices.Data;
 
     public sealed class StoredContact
@@ -28,6 +29,10 @@
         {
             this.UniqId = obj.Id.UniqueId;
             this.Email = obj.EmailAddresses[EmailAddressKey.EmailAddress1].Address;
+            if (this.Email != null)
+            {
+                this.Email = this.Email.Trim();
+            }
             this.CanBeSender = true;
             this.CanBeRecipient = true;
         }
@@ -58,6 +63,7 @@
             string fileName = Path.Combine(
                 StoredFolder, this.IsEwsContact ? this.UniqId + FileExt : this.Email + FileExt);
             string obj = JSON.ToJSON(this);
+            obj = JSON.Beautify(obj);
             File.WriteAllText(fileName, obj, Encoding.UTF8);
         }
 
